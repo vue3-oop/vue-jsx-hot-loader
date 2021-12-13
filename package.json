@@ -54,6 +54,7 @@
     "webpack-dev-server": "^3.11.1"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org"
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
   }
 }
