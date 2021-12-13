@@ -4,11 +4,7 @@ const babelConfig = {
   assumptions: {
     setPublicClassFields: true
   },
-  plugins: [
-    "@vue/babel-plugin-jsx",
-    ["@babel/plugin-proposal-decorators", { "legacy": true }],
-    ["@babel/plugin-proposal-class-properties"]
-  ],
+  plugins: ["@vue/babel-plugin-jsx"]
 };
 
 module.exports = {

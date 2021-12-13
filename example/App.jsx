@@ -2,7 +2,7 @@ import { defineComponent } from 'vue';
 import A from './A';
 import { B } from './B';
 import C from './C'
-import D from './D'
+import D, { D1 } from './D'
 const App = defineComponent({
   data() {
     return {
@@ -19,6 +19,7 @@ const App = defineComponent({
         <B />
         <C />
         <D></D>
+        <D1></D1>
       </>
     )
   }

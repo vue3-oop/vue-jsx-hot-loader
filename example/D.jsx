@@ -1,22 +1,22 @@
-import { Component, Ref, VueComponent } from 'vue3-oop'
+import { VueComponent } from 'vue3-oop'
 
 function Abc() {
   return <div>22223333</div>
 }
 
-class D extends VueComponent {
-  @Ref() count = 1
+export class D1 extends VueComponent {
+  render() {
+    return <div>命名导出类组件11</div>
+  }
+}
+
+export default class D extends VueComponent {
   render() {
     return (
       <div>
-        我是类组件1112222cccc
+        我是类组件222
         <Abc></Abc>
-        <button onClick={() => this.count++}>+</button>
-        <span>{this.count}</span>
-        <button onClick={() => this.count--}>-</button>
       </div>
     )
   }
 }
-
-export default D

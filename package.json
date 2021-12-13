@@ -8,7 +8,7 @@
     "dev": "tsc -w",
     "build": "tsc",
     "test": "jest --coverage",
-    "dev-example": "node --inspect-brk ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config example/webpack.config.js",
+    "dev-example": "webpack-dev-server --config example/webpack.config.js",
     "prepublishOnly": "tsc"
   },
   "files": [
