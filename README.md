@@ -1,4 +1,4 @@
-# @ant-design-vue/vue-jsx-hot-loader
+# @vue3-oop/jsx-hot-loader
 
 Tweak Vue components written in JSX in real time.
 
@@ -13,7 +13,7 @@ module.exports = {
       // Enable HMR for JSX.
       {
         test: /\.jsx$/,
-        use: ["babel-loader", "@ant-design-vue/vue-jsx-hot-loader"],
+        use: ["babel-loader", "@vue3-oop/jsx-hot-loader"],
       },
       // Remember to use babel on the rest of the JS files.
       {
