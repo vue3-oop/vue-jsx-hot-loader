@@ -4,7 +4,7 @@ import * as path from 'path';
 import * as loaderUtils from 'loader-utils';
 import * as t from '@babel/types';
 import { parse } from '@babel/parser';
-import { isDefineComponentCall, parseComponentDecls } from './utils';
+import { isDefineComponentCall, isExtendClassComponet, parseComponentDecls } from './utils'
 
 export default function loader(
   this: webpack.loader.LoaderContext,
@@ -43,7 +43,7 @@ export default function loader(
           local: name,
           id: hash(`${filename}-${name}`),
         })));
-      } else if (t.isClassDeclaration(declaration)) {
+      } else if (t.isClassDeclaration(declaration) && isExtendClassComponet(declaration)) {
         const name = declaration.id.name
         hotComponents.push({
           local: name,
@@ -76,7 +76,7 @@ export default function loader(
           id: hash(`${filename}-default`)
         });
         hasDefault = true
-      } else if (t.isClassDeclaration(declaration)) {
+      } else if (t.isClassDeclaration(declaration) && isExtendClassComponet(declaration)) {
         hotComponents.push({
           local: declaration.id.name,
           id: hash(`${filename}-default`)

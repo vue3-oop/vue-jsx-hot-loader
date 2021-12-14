@@ -3,6 +3,9 @@ import { VueComponent } from 'vue3-oop'
 function Abc() {
   return <div>22223333</div>
 }
+export class AbcD {
+
+}
 
 export class D1 extends VueComponent {
   render() {
@@ -14,7 +17,7 @@ export default class D extends VueComponent {
   render() {
     return (
       <div>
-        我是类组件222
+        我是类组件222dddd
         <Abc></Abc>
       </div>
     )
