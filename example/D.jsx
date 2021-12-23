@@ -13,13 +13,15 @@ export class D1 extends VueComponent {
   }
 }
 
-export default class D extends VueComponent {
+class D extends VueComponent {
   render() {
     return (
       <div>
-        我是类组件222dddd
+        我是类组件222ddddcccc
         <Abc></Abc>
       </div>
     )
   }
 }
+
+export default D

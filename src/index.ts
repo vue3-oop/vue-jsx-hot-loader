@@ -36,6 +36,8 @@ export default function loader(
   for (const node of file.program.body) {
     if (t.isVariableDeclaration(node)) {
       declaredComponents.push(...parseComponentDecls(node));
+    } else if (t.isClassDeclaration(node) && isExtendClassComponet(node)) {
+      declaredComponents.push({ name: node.id.name })
     } else if (t.isExportNamedDeclaration(node)) {
       const { specifiers = [], declaration } = node;
       if (t.isVariableDeclaration(declaration)) {
